@@ -1,3 +1,15 @@
+## 代码修改记录
+```
+login\index.js
+jumpToLogin 改为了  jumpToHome
+
+pageNoFound404
+const noFound = function noFound(){
+改为
+const noFound = function (){
+    
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
