@@ -6,11 +6,11 @@ class Login extends Component {
         return ( 
             <div>
                 登录
-                <input type="button" onClick={this.jumpToLogin} value="跳转到主页" />
+                <input type="button" onClick={this.jumpToHome} value="跳转到主页" />
             </div>
         )
     }
-    jumpToLogin =()=>{
+    jumpToHome =()=>{
         this.props.history.push('/home')
     }
 }
