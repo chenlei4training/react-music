@@ -12,8 +12,12 @@ import NoPage404 from '../view/pageNoFound404'
 
 function AppRouter(){
     return <BrowserRouter>
+                <Switch>
                     <Route path="/home" component={Home}/> 
                     <Route exact path="/login" component={Login}/>
+                    {/* 垫底的路由匹配 需要Switch配合 */}
+                    <Route  component= {NoPage404}/> 
+                </Switch>
             </BrowserRouter>
 }
 
