@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { Component } from "react"
 
+import {withRouter} from 'react-router-dom'
 
 //主页组件
-// TODO 将修改为类组件
-export default function Home(){ //目前是函数组件，功能很弱 
+class Home extends Component {
     //html onclick="fun(event)"
-    return <div>
-              这是我的主页  
-              <input type="button" onClick={jumpToLogin} value="跳到登录页面">
-              </input>
-            </div>
+    render() {
+        return <div>
+            这是我的主页
+              <input type="button" onClick={this.jumpToLogin} value="跳到登录页面">
+            </input>
+        </div>
+    }
+
+    jumpToLogin = () => {
+        //alert('this='+ this)
+        this.props.history.push('/login')
+    }
+
 }
 
-function jumpToLogin(){
-    alert('I wanna jump to login')
+export default withRouter(Home)
 
-}
+
 
