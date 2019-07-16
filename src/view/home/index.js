@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 import {withRouter} from 'react-router-dom'
 
+
 //主页组件
 class Home extends Component {
     //html onclick="fun(event)"
@@ -16,6 +17,7 @@ class Home extends Component {
     jumpToLogin = () => {
         //alert('this='+ this)
         this.props.history.push('/login')
+        // window.history.push()
     }
 
 }
