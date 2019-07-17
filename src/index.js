@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'amfe-flexible'
+
+import './looking/css/core.css'
+// import './looking/css/login.css'
+import './looking/scss/login.scss'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
