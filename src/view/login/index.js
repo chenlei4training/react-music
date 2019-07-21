@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { withRouter, NavLink ,Link } from 'react-router-dom'
+import { withRouter, NavLink, Link } from 'react-router-dom'
 import ajax from '../../util/ajax'
 
 import "../../style/scss/login.scss"
@@ -26,14 +26,24 @@ class Login extends Component {
         ajax.post('/user/check', {
             user: this.refs.user.value,
             password: this.refs.password.value
+        }).then((result) => {
+            if (result.data.code === 1 && result.data.token) {
+                localStorage.setItem('token', result.data.token)
+                this.props.history.push('/home')
+            } else {
+                alert(result.data.msg)
+            }
         })
-            .then((result) => {
-                alert(result)
-            })
     }
 
     register = () => {
-        alert('register')
+        ajax.post('/user/register', {
+            user: this.refs.user.value,
+            password: this.refs.password.value
+        }).then((result) => {
+            alert(JSON.stringify(result))
+            alert(result.data.msg)
+        })
     }
 
     renderOption = ({ match }) => {
@@ -45,7 +55,6 @@ class Login extends Component {
             <div className="login-content">
                 <div>登陆</div>
 
-                
                 <div>
                     <input type="text" ref="user" placeholder="ur name" />
                 </div>
@@ -73,11 +82,11 @@ class Login extends Component {
                 <div>
                     <input type="password" ref="re-password" placeholder="repeat ur password" />
                 </div>
-                
+
                 <div>
                     <input type="button" onClick={this.register} defaultValue="注册" />
                 </div>
-                
+
             </div>)
     }
 }
