@@ -15,9 +15,22 @@
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
-
     }
 
+    a {
+        text-decoration: none;
+        color:blue;
+    }
+
+    .selected {
+       background-color:palegreen;
+       color: black;
+    }
+
+    a.float-right{
+        float: right;
+        color: darkblue;
+    }
 }
 
 
