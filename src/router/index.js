@@ -15,7 +15,7 @@ function AppRouter(){
                 <Switch>
                     <Route exact path="/" render={() => {return <Redirect to="/home"/>}}/>
                     <Route path="/home" component={Home}/> 
-                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/login/:id" component={Login}/>
                     {/* 垫底的路由匹配 需要Switch配合 */}
                     <Route  component= {NoPage404}/> 
                 </Switch>

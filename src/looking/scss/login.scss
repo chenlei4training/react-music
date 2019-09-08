@@ -9,6 +9,18 @@
     height:80%;
     border:1px solid black;
 
+    .selected{
+        color: darkblue;
+        background: yellow;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    
+    .float-right
+    {float:right}
+
     .login-content{
         position: absolute;
         top:50%;

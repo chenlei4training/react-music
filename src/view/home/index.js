@@ -16,7 +16,7 @@ class Home extends Component {
 
     jumpToLogin = () => {
         //alert('this='+ this)
-        this.props.history.push('/login')
+        this.props.history.push('/login/signin')
         // window.history.push()
     }
 
