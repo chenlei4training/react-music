@@ -35,6 +35,15 @@ class Login extends Component {
             console.log(result)
         })
     }
+
+    register = () => {
+        ajax.post('/user/register',{
+            user:this.refs.user.value,
+            password:this.refs.password.value
+        }).then((result)=>{
+            alert(JSON.stringify(result))
+        })
+    }
     renderOption = (props)=> {
         if (props.match.params.id === 'signin') { //signin
             return (<div className="login-content">
@@ -53,7 +62,7 @@ class Login extends Component {
                 <div><input type="password" ref="password" placeholder="你的密码" /></div>
                 <div><input type="password" ref="re-password" placeholder="再次输入你的密码" /></div>
 
-                <div><input type="button" onClick={this.jumpToHome} defaultValue="注册" /></div>
+                <div><input type="button" onClick={this.register} defaultValue="注册" /></div>
      
             </div>
             )
