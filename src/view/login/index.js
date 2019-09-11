@@ -37,12 +37,23 @@ class Login extends Component {
     }
 
     register = () => {
+        if (this.refs.password.value !== this.refs.re_password.value){
+            alert('two password are not the same')
+            return
+        }
+
         ajax.post('/user/register', {
             user: this.refs.user.value,
             password: this.refs.password.value
         }).then((result) => {
-            alert(JSON.stringify(result))
-            alert(result.data.msg)
+            // alert(JSON.stringify(result))
+            if (result.data.code===1 && result.data.token) {
+                localStorage.setItem('token', result.data.token)
+                this.props.history.push('/home')
+            } else {
+                alert(result.data.msg)
+            }
+            
         })
     }
 
@@ -80,7 +91,7 @@ class Login extends Component {
                 </div>
 
                 <div>
-                    <input type="password" ref="re-password" placeholder="repeat ur password" />
+                    <input type="password" ref="re_password" placeholder="repeat ur password" />
                 </div>
 
                 <div>
