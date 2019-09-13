@@ -37,7 +37,7 @@ class Home extends Component {
                                 <a hidefocus="true" href="#" class="link">登录</a>
                             </div>
 
-                            <a target="_blank" className="m-topvd f-pr m-creator-center">创作者中心</a>
+                            <a target="_blank" className="m-topvd f-pr">创作者中心</a>
 
                             <div className="srchbg">
                                 <i className="icon">&nbsp;</i>
