@@ -1,0 +1,138 @@
+.home{
+    .g-topbar{
+        position: relative;
+        width: 100%;
+        height: 104px;//70+34;
+        .m-top{
+            background: #242424;
+            height: 70px;
+            .wrap{
+                width: 1100px;
+                margin: 0 auto;
+                height: 100%;
+            
+                .logo{
+                    float: left;
+                    width: 176px;
+                    height: 69px;
+                    margin: 0;
+                    background-image: url(../img/topbar.png);
+                    background-position: 0 0;
+                    background-repeat: none;
+                }
+
+                .m-nav{
+                    float:left;
+                    li{
+                        float:left;
+                        position: relative;
+                        height: 70px;
+                        list-style: none;
+
+                        a {
+                            float: left;
+                            color:#ccc;
+                            outline: none;
+                            font-size: 14px;
+                            padding:0 19px;
+                            line-height: 70px;
+                            text-decoration: none;
+                        }
+
+                        a:hover, a:focus {
+                            background:#000;
+                            color:#fff;
+                            text-decoration: none;
+                        }
+                        .hot{
+                            display: block;
+                            position: absolute;
+                            
+                            background-position: -190px 0;
+                            background-image:url(../img/topbar.png);
+                            width:28px;
+                            height: 19px;
+
+                            left:-10px;
+                            top:20px;
+
+                        }
+
+                        
+                    }
+
+                }
+
+                .m-tophead{
+                    float: right;
+                    height: 45px;
+                    margin: 19px 0 0 20px; 
+                    padding: 0 22px 0 0;
+                    background-image: url(../img/topbar.png);
+                    background-position: right -47px;
+                    a {
+                        width: 28px;
+                        line-height: 34px;
+                        color:#787878;
+                        text-decoration: none;
+                    }
+                }
+
+                .m-topvd{
+                    float: right;
+                    width:90px;
+                    margin: 19px 0 0 12px;
+                    padding-left:16px;
+                    border:1px solid #4f4f4f;
+                    line-height: 33px;
+                    color:#ccc;
+                    border-radius: 20px;
+                    text-decoration: none;
+                }
+                .m-topvd:hover {
+                    color:#fff;
+                    border:1px solid #ccc;
+                }
+
+                .srchbg{
+                    float: right;
+                    margin-top:19px;
+                    background-color: #fff;
+                    border-radius: 32px;
+                    width: 158px;
+                    height: 32px;
+                    
+                    i {
+                        background-image: url(../img/topbar.png);
+                        background-position: 0 -99px;
+                        float:left;
+                        width:32px;
+                        height: 32px;
+                    }
+
+                    input {
+                        float: left;
+                        color:#333;
+                        line-height: 16px;
+                        width:100px;
+                        border:0;
+                        margin: 10px auto;
+                    }
+
+                    input:focus{
+                        outline:none;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+.f-cb::after{
+    clear:both;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
