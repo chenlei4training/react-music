@@ -50,8 +50,8 @@ class Home extends Component {
 
 
 
-                <div>
-                    content page
+                <div className="content">
+                   <a href="#">content</a>
 
                 </div>
             </div>
