@@ -5,7 +5,7 @@ import {HashRouter,BrowserRouter,StaticRouter,MemoryRouter,Route,Switch,Redirect
 
 
 
-import Home from '../view/home'
+import Home from '../view/home/home'
 import Login from '../view/login'
 
 import NoPage404 from '../view/pageNoFound404'

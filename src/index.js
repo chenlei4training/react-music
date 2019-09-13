@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/css/init.css';
-// import './style/css/login.css';
 import  'amfe-flexible'
 
 import App from './App';
