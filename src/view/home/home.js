@@ -3,6 +3,8 @@ import React, { Component } from "react"
 import { withRouter } from 'react-router-dom'
 
 import "../../style/scss/home.scss"
+
+import SubNav from './com/subNav'
 //主页组件
 class Home extends Component {
     //html onclick="fun(event)"
@@ -18,7 +20,11 @@ class Home extends Component {
 
                             {/* <!-- float left --> */}
                             <ul className="m-nav">
-                                <li><a href="#" >发现音乐</a></li>
+                                <li>
+                                    <a href="#" >发现音乐
+                                    <sub>&nbsp;</sub>
+                                </a>
+                                </li>
 
                                 <li><a href="#">我的音乐</a></li>
 
@@ -45,14 +51,12 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
+
+                    <SubNav></SubNav>
                 </div>
-
-
-
 
                 <div className="content">
                    <a href="#">content</a>
-
                 </div>
             </div>
         )
