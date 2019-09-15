@@ -3,6 +3,8 @@ import React, { Component } from "react"
 import {withRouter} from 'react-router-dom'
 
 import "../../looking/scss/home.scss"
+
+import SubNav from './com/subNav'
 //主页组件
 class Home extends Component {
     //html onclick="fun(event)"
@@ -16,7 +18,7 @@ class Home extends Component {
 
                             {/* 菜单导航 */}
                             <ul className="m-nav">
-                                <li> <a href="#">发现音乐</a></li>
+                                <li> <a href="#">发现音乐 <sub>&nbsp;</sub></a></li>
                                 <li> <a href="#">我的音乐</a></li>
                                 <li> <a href="#">朋友</a></li>
                                 <li> <a href="#">商城</a></li>
@@ -40,6 +42,7 @@ class Home extends Component {
 
                         </div>
                     </div>
+                    <SubNav></SubNav>
                 </div>
 
                 <div className="conetent"> 这里是主要内容</div>

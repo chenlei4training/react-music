@@ -1,4 +1,6 @@
 .home{
+    $warp_center_width:1100px;
+
     .g-topbar{
         position: relative;
         width: 100%;
@@ -7,7 +9,7 @@
             background: #242424;
             height: 70px;
             .wrap{
-                width: 1100px;
+                width: $warp_center_width;
                 margin: 0 auto;
                 height: 100%;
             
@@ -37,6 +39,18 @@
                             padding:0 19px;
                             line-height: 70px;
                             text-decoration: none;
+                            sub {
+                                background-image: url(../img/topbar.png);
+                                background-position: -226px 0;
+                                width: 12px;
+                                height: 7px;
+
+                                position: absolute;
+                                left:50%;
+                                top:64px;
+                                margin-left:-6px;
+
+                            }
                         }
 
                         a:hover, a:focus {
@@ -62,22 +76,25 @@
                     }
 
                 }
-
+                //登录
                 .m-tophead{
                     float: right;
                     height: 45px;
                     margin: 19px 0 0 20px; 
                     padding: 0 22px 0 0;
                     background-image: url(../img/topbar.png);
-                    background-position: right -47px;
+                    background-position: 100% -47px;
                     a {
                         width: 28px;
-                        line-height: 34px;
+                        margin-top:7px;
+                        display: block;
+                        
                         color:#787878;
                         text-decoration: none;
                     }
                 }
 
+                
                 .m-topvd{
                     float: right;
                     width:90px;
@@ -125,6 +142,42 @@
 
                 }
             }
+        }
+        .m_subnav{
+            position: relative;
+            height: 35px;
+            background:#c20c0c;
+            width: 100%;
+            .wrap{
+                width: $warp_center_width;
+                margin:0 auto;
+
+                ul{
+                    padding-left: 180px;
+                    li{
+                        list-style: none;
+                        float: left;
+                        height: 34px;
+                        text-align: center;
+
+                        a{
+                            float: left;
+                            height: 20px;
+                            padding: 0 13px;
+                            margin: 7px 17px 0;
+                            border-radius: 20px;
+                            line-height: 21px;
+                            color:white;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            background:#9b0909;
+                        }
+                    }
+                }
+            }
+
+
         }
     }
 
