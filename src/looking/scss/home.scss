@@ -51,12 +51,24 @@
                                 margin-left:-6px;
 
                             }
+
+                            sub.show-arrow{
+                                display: block;
+                            }
+                            sub.no-show-arrow{
+                                display: none;
+                            }
                         }
 
                         a:hover, a:focus {
                             background:#000;
                             color:#fff;
                             text-decoration: none;
+                        }
+
+                        a.selected{
+                            background: #000;
+                            color: #fff;
                         }
                         .hot{
                             display: block;

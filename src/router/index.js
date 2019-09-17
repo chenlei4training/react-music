@@ -11,15 +11,16 @@ import Login from '../view/login'
 import NoPage404 from '../view/pageNoFound404'
 
 function AppRouter(){
-    return <BrowserRouter>
+    return <HashRouter>
                 <Switch>
-                    <Route exact path="/" render={() => {return <Redirect to="/home"/>}}/>
-                    <Route path="/home" component={Home}/> 
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/:main_nav" component={Home}/> 
+                    <Route exact path="/:main_nav/:sub_nav" component={Home}/> 
                     <Route exact path="/login/:id" component={Login}/>
                     {/* 垫底的路由匹配 需要Switch配合 */}
                     <Route  component= {NoPage404}/> 
                 </Switch>
-            </BrowserRouter>
+            </HashRouter>
 }
 
 export default AppRouter
