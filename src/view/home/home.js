@@ -7,10 +7,6 @@ import "../../style/scss/home.scss"
 import SubNav from './com/subNav'
 //主页组件
 class Home extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { main_nav: 'discover', sub_nav: 'recommend' }
-    }
 
     render() {
         let params = this.props.match.params
