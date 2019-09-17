@@ -11,19 +11,20 @@ import Login from '../view/login'
 import NoPage404 from '../view/pageNoFound404'
 
 function AppRouter() {
-    return <BrowserRouter>
+    return <HashRouter>
         <Switch>
             {/* <Route exact path="/" render={() => {return <Redirect to="/home"/>}}/> */}
             <Route exact path="/" component={Home} />
+            {/* login path must before  path="/:main_nav/" */}
+            <Route path="/login/:id" component={Login} />
 
             <Route exact path="/:main_nav/" component={Home} />
             <Route exact path="/:main_nav/:sub_nav" component={Home} />
-            {/* <Route path="/home/:top/:sub" component={Home}/>  */}
-            <Route path="/login/:id" component={Login} />
+            
             {/* 垫底的路由匹配 需要Switch配合 */}
             <Route component={NoPage404} />
         </Switch>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default AppRouter

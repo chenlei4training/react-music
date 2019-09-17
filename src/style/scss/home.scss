@@ -5,7 +5,7 @@
   .g-topbar {
     position: relative;
     width: 100%;
-    height: 104px;
+    // height: 104px;
     .m-top {
       background: #242424;
       height: 70px;
@@ -49,12 +49,23 @@
 
                     margin-left:-7px; //with left 50% make it center
                 }
-              }
+                .show-arrow{
+                  display: block;
+                }
+                .no-show-arrow{
+                  display: none;
+                }
+            }
             a:hover,
             a:focus {
               background: #000;
               color: #fff;
               text-decoration: none;
+            }
+
+            a.selected{
+              background: #000;
+              color:#fff;
             }
 
             .hot {
@@ -168,17 +179,22 @@
               color: white;
               text-decoration: none;
             }
-            a:hover {
+            a:hover, a.selected {
               background: #9b0909;
             }
           }
         }
       }
     }
+
+    .one-red-line{
+      height: 5px;
+      background-color: #c20c0c;
+    }
   }
 
   .content {
-    float: right;
+    float: left;
     background-position: right 0px;
     background-image: url(../img/test-bg.png);
     background-repeat: no-repeat;
@@ -186,7 +202,7 @@
 
     height: 60px;
     a {
-      float: right;
+      float: left;
       width: 30px;
     }
   }

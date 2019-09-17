@@ -13,7 +13,7 @@ class Login extends Component {
                     <NavLink to="/login/login" activeClassName="selected">登陆</NavLink>
                     <NavLink to="/login/register" activeClassName="selected">注册</NavLink>
 
-                    <Link to="/home" className="float-right">返回主页</Link>
+                    <Link to="/" className="float-right">返回主页</Link>
                 </div>
 
                 {this.renderOption(this.props)}

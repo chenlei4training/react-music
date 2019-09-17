@@ -1,14 +1,21 @@
 import React, { Component } from "react"
 
-import { withRouter } from 'react-router-dom'
+import { withRouter} from 'react-router-dom'
 
 import "../../style/scss/home.scss"
 
 import SubNav from './com/subNav'
 //主页组件
 class Home extends Component {
-    //html onclick="fun(event)"
+    constructor(props) {
+        super(props)
+        this.state = { main_nav: 'discover', sub_nav: 'recommend' }
+    }
+
     render() {
+        let params = this.props.match.params
+        console.log('params', params)
+
         return (
             <div className="home">
                 <div className="g-topbar">
@@ -21,29 +28,39 @@ class Home extends Component {
                             {/* <!-- float left --> */}
                             <ul className="m-nav">
                                 <li>
-                                    <a href="#" >发现音乐
-                                    <sub>&nbsp;</sub>
-                                </a>
+                                    <a href="/#/discover/"  className={this.isSltCls('discover', params)}>发现音乐
+                                        <sub className={this.isShowCls('discover', params)}>&nbsp;</sub>
+                                    </a>
                                 </li>
 
-                                <li><a href="#">我的音乐</a></li>
+                                <li><a  href="/#/myMusic/" className={this.isSltCls('myMusic', params)}>我的音乐
+                                        <sub className={this.isShowCls('myMusic', params)}>&nbsp;</sub>
+                                </a></li>
 
-                                <li><a href="#">朋友</a></li>
+                                <li><a href="/#/friend/" className={this.isSltCls('friend', params)}>朋友
+                                    <sub className={this.isShowCls('friend', params)}>&nbsp;</sub>
+                                </a></li>
 
-                                <li><a href="#">商城</a></li>
+                                <li><a href="/#/store/" className={this.isSltCls('store', params)}>商城
+                                <sub className={this.isShowCls('store', params)}>&nbsp;</sub>
+                                </a></li>
 
-                                <li><a href="#">音乐人</a></li>
+                                <li><a href="/#/musician/" className={this.isSltCls('musician', params)}>音乐人
+                                <sub className={this.isShowCls('musician', params)}>&nbsp;</sub>
+                                </a></li>
 
-                                <li><a href="#">下载客户端</a></li>
+                                <li><a href="/#/download/" className={this.isSltCls('download', params)}>下载客户端
+                                <sub className={this.isShowCls('download', params)}>&nbsp;</sub>
+                                </a></li>
                                 <li><sup className="hot">&nbsp;</sup></li>
                             </ul>
 
                             {/* <!-- float right --> */}
                             <div className="m-tophead">
-                                <a hidefocus="true" href="#" class="link">登录</a>
+                                <a href="/#/login/login/">登录</a>
                             </div>
 
-                            <a target="_blank" className="m-topvd f-pr">创作者中心</a>
+                            <a href="/#/creator/" className="m-topvd f-pr">创作者中心</a>
 
                             <div className="srchbg">
                                 <i className="icon">&nbsp;</i>
@@ -52,25 +69,60 @@ class Home extends Component {
                         </div>
                     </div>
 
-                    <SubNav></SubNav>
+                    <SubNav params={{...params}}></SubNav>
                 </div>
 
-                <div className="content">
-                   <a href="#">content</a>
+                <div className="content-xxx">
+                    <a href="#"> linkAAA</a>
+                    
+                    <p>{`main_nav = ${params.main_nav}`}</p>
+                    <p>{`sub_nav = ${params.sub_nav}`}</p>
+
                 </div>
             </div>
         )
-        // return <div>
-        //     这是我的主页
-        //       <input type="button" onClick={this.jumpToLogin} value="跳到登录页面">
-        //     </input>
-        // </div>
     }
 
-    jumpToLogin = () => {
-        //alert('this='+ this)
-        this.props.history.push('/login/login')
+    navTo = (path,e)=>{
+        // alert(e)
+        console.log(e)
+        let str="abc"
+        let myStr = str;
+        myStr =`str:${str}`
+        console.log(str)
+
+        this.props.history.push(path)
+
     }
+
+    isSltCls = (current_main_nav, params) => {
+        if (this.isSelectedNav(current_main_nav, params)) {
+            return "selected"
+        } else {
+            return "no-selected"
+        }
+    }
+
+    isShowCls = (current_main_nav, params) => {
+        if (this.isSelectedNav(current_main_nav, params)) {
+            return "show-arrow"
+        } else {
+            return "no-show-arrow"
+        }
+    }
+
+    isSelectedNav = (current_main_nav, params) => {
+        if ('discover' === current_main_nav && !params.main_nav) {
+            return true
+        }
+
+        if (current_main_nav === params.main_nav) {
+            return true
+        } else {
+            return false
+        }
+    }
+
 
 }
 
