@@ -56,7 +56,7 @@ class Home extends Component {
                             {/* 浮动到右边的类容 */}
                             {/* 登录 */}
                             <div className="m-tophead">
-                                <a href="#">登录</a>
+                                <a href="/#/login/signin/">登录</a>
                             </div>
 
                             <a href="#" className="m-topvd">创作中心</a>
@@ -69,7 +69,7 @@ class Home extends Component {
 
                         </div>
                     </div>
-                    <SubNav></SubNav>
+                    <SubNav params={{...params}}></SubNav>
                 </div>
 
                 <div className="conetent"> 这里是主要内容

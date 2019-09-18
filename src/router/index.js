@@ -14,9 +14,12 @@ function AppRouter(){
     return <HashRouter>
                 <Switch>
                     <Route exact path="/" component={Home}/>
+                    {/* login的路由匹配需要放在main_nav前面 */}
+                    <Route exact path="/login/:id" component={Login}/>
+
                     <Route exact path="/:main_nav" component={Home}/> 
                     <Route exact path="/:main_nav/:sub_nav" component={Home}/> 
-                    <Route exact path="/login/:id" component={Login}/>
+                    
                     {/* 垫底的路由匹配 需要Switch配合 */}
                     <Route  component= {NoPage404}/> 
                 </Switch>

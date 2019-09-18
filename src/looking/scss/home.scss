@@ -182,14 +182,12 @@
                             color:white;
                             text-decoration: none;
                         }
-                        a:hover{
+                        a:hover, a.selected{
                             background:#9b0909;
                         }
                     }
                 }
             }
-
-
         }
     }
 
