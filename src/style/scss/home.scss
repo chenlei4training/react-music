@@ -1,6 +1,5 @@
 .home {
-
-  $wrap_bar_w : 1100px;//实际菜单使用的宽度
+  $wrap_bar_w: 1100px; //实际菜单使用的宽度
 
   .g-topbar {
     position: relative;
@@ -39,22 +38,22 @@
               line-height: 70px;
               text-decoration: none;
               sub {
-                    background-image: url('../img/topbar.png');
-                    background-position: -226px 0;
-                    width: 12px;
-                    height: 7px;
-                    position: absolute;
-                    left:50%;
-                    top:64px;
+                background-image: url("../img/topbar.png");
+                background-position: -226px 0;
+                width: 12px;
+                height: 7px;
+                position: absolute;
+                left: 50%;
+                top: 64px;
 
-                    margin-left:-7px; //with left 50% make it center
-                }
-                .show-arrow{
-                  display: block;
-                }
-                .no-show-arrow{
-                  display: none;
-                }
+                margin-left: -7px; //with left 50% make it center
+              }
+              .show-arrow {
+                display: block;
+              }
+              .no-show-arrow {
+                display: none;
+              }
             }
             a:hover,
             a:focus {
@@ -63,9 +62,9 @@
               text-decoration: none;
             }
 
-            a.selected{
+            a.selected {
               background: #000;
-              color:#fff;
+              color: #fff;
             }
 
             .hot {
@@ -179,7 +178,8 @@
               color: white;
               text-decoration: none;
             }
-            a:hover, a.selected {
+            a:hover,
+            a.selected {
               background: #9b0909;
             }
           }
@@ -187,7 +187,7 @@
       }
     }
 
-    .one-red-line{
+    .one-red-line {
       height: 5px;
       background-color: #c20c0c;
     }
