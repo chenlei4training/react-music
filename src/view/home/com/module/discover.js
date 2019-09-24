@@ -30,7 +30,7 @@ const Discover = (props) => {
                             <i>&nbsp;</i>
                         </div>
                     </div>
-
+                    {/* TODO: Move the list to a single component */}
                     <div className="list">
 
                         <div className="item">
@@ -136,7 +136,7 @@ const Discover = (props) => {
                     </div>
                 </div>
 
-                {/* 右边 */}
+                {/*TODO: Move this right panel to a single componnet  右边 */}
                 <div className="right-panel">
 
                     <div class="my-info">
@@ -157,8 +157,8 @@ const Discover = (props) => {
                             <a href="/#/">
                                 <div className="head"><img src="http://p2.music.126.net/p9U80ex1B1ciPFa125xV5A==/5931865232210340.jpg?param=62y62" /></div>
                                 <div className="ifo">
-                                    <h4><span className="nm f-fs1 f-ib f-thide">张惠妹aMEI</span></h4>
-                                    <p className="f-thide s-fc3">台湾歌手张惠妹</p>
+                                    <h4><span className="">张惠妹aMEI</span></h4>
+                                    <p className="">台湾歌手张惠妹</p>
                                 </div>
                             </a>
                         </li>
@@ -167,13 +167,61 @@ const Discover = (props) => {
                             <a href="/#/">
                                 <div className="head"><img src="http://p2.music.126.net/1EN_iqQWU_E3DafzEOh3cA==/3302932937408956.jpg?param=62y62" /></div>
                                 <div className="ifo">
-                                    <h4><span className="nm f-fs1 f-ib f-thide">Fine乐团</span></h4>
-                                    <p className="f-thide s-fc3">独立音乐人</p>
+                                    <h4><span className="">Fine乐团</span></h4>
+                                    <p className="">独立音乐人</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/#/">
+                                <div className="head"><img src="http://p2.music.126.net/ZuktZvjcxpYBjcWC3gmbPg==/19027048718765608.jpg?param=62y62" /></div>
+                                <div className="ifo">
+                                    <h4><span className="">独立音乐人</span></h4>
+                                    <p className="">民谣歌手、中国现代民谣的代表人物之一</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/#/">
+                                <div className="head"><img src="http://p2.music.126.net/v_zYgE9kmAwVGWV2c8hFxA==/7943971513291094.jpg?param=62y62" /></div>
+                                <div className="ifo">
+                                    <h4><span className="">萬曉利</span></h4>
+                                    <p className="">民谣歌手、中国现代民谣的代表人物之一</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/#/">
+                                <div className="head"><img src="http://p2.music.126.net/6wPGl_ddgAbJTx5kOohcyw==/109951163892302996.jpg?param=62y62" /></div>
+                                <div className="ifo">
+                                    <h4><span className="">王三溥</span></h4>
+                                    <p className="">音乐人</p>
                                 </div>
                             </a>
                         </li>
 
                     </ul>
+
+                    <button>成为音乐人</button>
+                    {/* TODO Move dj list to a single component  */}
+                    <div className='dj'>
+                        <h3>热门主播</h3>
+                        <ul>
+                            <li>
+                                <a href="#" className="cver">
+                                    <img className="j-img" src="http://p1.music.126.net/H3QxWdf0eUiwmhJvA4vrMQ==/1407374893913311.jpg?param=40y40" />
+                                </a>
+                                <div class="info">
+                                    <p>
+                                        <a href="#" class="">陈立</a> <sup class=""></sup>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
