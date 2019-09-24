@@ -113,6 +113,7 @@
                     background-position: 0 0;
                     width: 16px;
                     height: 17px;
+                    
                   }
                   a:hover{
                     background-position: 0 -60px
@@ -121,6 +122,13 @@
               }
               p {
                 width: 138px;
+                a{
+                  text-decoration: none;
+                  color:black;
+                }
+                a:hover{
+                  text-decoration: underline;
+                }
               }
             }
           }
