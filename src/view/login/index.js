@@ -53,7 +53,6 @@ class Login extends Component {
             } else {
                 alert(result.data.msg)
             }
-            
         })
     }
 

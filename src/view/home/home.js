@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import { withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import "../../style/scss/home.scss"
 
@@ -31,12 +31,12 @@ class Home extends Component {
                             {/* <!-- float left --> */}
                             <ul className="m-nav">
                                 <li>
-                                    <a href="/#/discover/"  className={this.isSltCls('discover', params)}>发现音乐
+                                    <a href="/#/discover/" className={this.isSltCls('discover', params)}>发现音乐
                                         <sub className={this.isShowCls('discover', params)}>&nbsp;</sub>
                                     </a>
                                 </li>
 
-                                <li><a  href="/#/myMusic/" className={this.isSltCls('myMusic', params)}>我的音乐
+                                <li><a href="/#/myMusic/" className={this.isSltCls('myMusic', params)}>我的音乐
                                         <sub className={this.isShowCls('myMusic', params)}>&nbsp;</sub>
                                 </a></li>
 
@@ -72,7 +72,7 @@ class Home extends Component {
                         </div>
                     </div>
 
-                    <SubNav params={{...params}}></SubNav>
+                    <SubNav params={{ ...params }}></SubNav>
                 </div>
 
                 <div className="main-content">
@@ -81,7 +81,7 @@ class Home extends Component {
                     </div>
 
                     <Discover></Discover>
-                    
+
                     <p>{`main_nav = ${params.main_nav}`}</p>
                     <p>{`sub_nav = ${params.sub_nav}`}</p>
                 </div>
@@ -89,12 +89,12 @@ class Home extends Component {
         )
     }
 
-    navTo = (path,e)=>{
+    navTo = (path, e) => {
         // alert(e)
         console.log(e)
-        let str="abc"
+        let str = "abc"
         let myStr = str;
-        myStr =`str:${str}`
+        myStr = `str:${str}`
         console.log(str)
 
         this.props.history.push(path)

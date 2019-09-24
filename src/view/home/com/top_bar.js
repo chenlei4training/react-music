@@ -1,6 +1,6 @@
 import React from "react"
 
-const TopBar = (props)=> {
+const TopBar = (props) => {
     return (
         <div className="g-topbar">
             <div className="m-top">

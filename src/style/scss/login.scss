@@ -1,38 +1,34 @@
-@import './font.scss';
+@import "./font.scss";
 
-.login-box{
-   font-size:$x-large;
-   position: absolute;
-   top:10%;
-   right:10%;
-   width: 80%;
-   height: 80%;
-   border: 1px solid black;
-   
-   .login-content{
-        position: absolute;
-    
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-    }
+.login-box {
+  font-size: $x-large;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 80%;
+  height: 80%;
+  border: 1px solid black;
 
-    a {
-        text-decoration: none;
-        color:blue;
-    }
+  .login-content {
+    position: absolute;
 
-    .selected {
-       background-color:palegreen;
-       color: black;
-    }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    a.float-right{
-        float: right;
-        color: darkblue;
-    }
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .selected {
+    background-color: palegreen;
+    color: black;
+  }
+
+  a.float-right {
+    float: right;
+    color: darkblue;
+  }
 }
-
-
-
-  
