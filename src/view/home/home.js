@@ -4,7 +4,14 @@ import { withRouter} from 'react-router-dom'
 
 import "../../style/scss/home.scss"
 
+import "../../style/scss/my-swiper.scss"
+
 import SubNav from './com/subNav'
+
+import FadeEffect from './com/swiper'
+
+import Discover from './com/module/discover'
+
 //主页组件
 class Home extends Component {
 
@@ -68,12 +75,15 @@ class Home extends Component {
                     <SubNav params={{...params}}></SubNav>
                 </div>
 
-                <div className="content-xxx">
-                    <a href="#"> linkAAA</a>
+                <div className="main-content">
+                    <div className="banner">
+                        <FadeEffect></FadeEffect>
+                    </div>
+
+                    <Discover></Discover>
                     
                     <p>{`main_nav = ${params.main_nav}`}</p>
                     <p>{`sub_nav = ${params.sub_nav}`}</p>
-
                 </div>
             </div>
         )
