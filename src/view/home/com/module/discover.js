@@ -223,6 +223,12 @@ const Discover = (props) => {
                         </ul>
                     </div>
                 </div>
+
+                <div className="container">
+                    <div className="head">
+                        <a href="/#/discover/playlist/" className="tit">新碟上架</a>    
+                    </div>
+                </div>    
             </div>
         </div>
     )
