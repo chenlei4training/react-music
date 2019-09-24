@@ -1,0 +1,205 @@
+.home {
+
+  $wrap_bar_w : 1100px;//实际菜单使用的宽度
+
+  .g-topbar {
+    position: relative;
+    width: 100%;
+    // height: 104px;
+    .m-top {
+      background: #242424;
+      height: 70px;
+      .wrap {
+        width: $wrap_bar_w;
+        height: 100%;
+        margin: 0 auto;
+        .logo {
+          float: left;
+          width: 176px;
+          height: 69px;
+          margin: 0;
+          background-position: 0 0;
+          background-image: url(../img/topbar.png);
+          background-repeat: no-repeat;
+        }
+
+        .m-nav {
+          float: left;
+          li {
+            float: left;
+            position: relative;
+            height: 70px;
+            list-style: none;
+            a {
+              float: left;
+              color: #ccc;
+              outline: none;
+              font-size: 14px;
+              padding: 0 19px;
+              line-height: 70px;
+              text-decoration: none;
+              sub {
+                    background-image: url('../img/topbar.png');
+                    background-position: -226px 0;
+                    width: 12px;
+                    height: 7px;
+                    position: absolute;
+                    left:50%;
+                    top:64px;
+
+                    margin-left:-7px; //with left 50% make it center
+                }
+                .show-arrow{
+                  display: block;
+                }
+                .no-show-arrow{
+                  display: none;
+                }
+            }
+            a:hover,
+            a:focus {
+              background: #000;
+              color: #fff;
+              text-decoration: none;
+            }
+
+            a.selected{
+              background: #000;
+              color:#fff;
+            }
+
+            .hot {
+              display: block;
+              position: absolute;
+              top: 21px;
+              left: -10px;
+              width: 28px;
+              height: 19px;
+              background-position: -190px 0px;
+              background-image: url(../img/topbar.png);
+              background-repeat: no-repeat;
+            }
+          }
+        }
+
+        // 登录
+        .m-tophead {
+          float: right;
+          height: 45px;
+          margin: 19px 0 0 20px;
+          padding: 0 22px 0 0;
+          background-position: right -47px;
+          background-image: url(../img/topbar.png);
+          background-repeat: no-repeat;
+
+          a,
+          a:hover {
+            display: block;
+            width: 28px;
+            margin-top: 7px;
+            color: #787878;
+          }
+        }
+
+        // 创造中心
+        .m-topvd {
+          float: right;
+          width: 90px;
+          height: 32px;
+          margin: 19px 0 0 12px;
+          padding-left: 16px;
+          border: 1px solid #4f4f4f;
+          background-position: 0 -140px;
+          line-height: 33px;
+          color: #ccc;
+          border-radius: 20px;
+        }
+
+        .m-topvd:hover {
+          color: #fff;
+          border: 1px solid #ccc;
+        }
+
+        .srchbg {
+          float: right;
+          margin-top: 19px;
+          background-color: #fff;
+          border-radius: 32px;
+          width: 158px;
+          height: 32px;
+
+          i {
+            background-position: 0 -99px;
+            background-image: url(../img/topbar.png);
+            background-repeat: no-repeat;
+            float: left;
+            width: 32px;
+            height: 32px;
+          }
+          input {
+            float: left;
+            color: #333;
+            line-height: 16px;
+            width: 100px;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            margin: 10px auto;
+          }
+          input:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .m-subnav {
+      position: relative;
+      height: 35px;
+      background-color: #c20c0c;
+      width: 100%;
+      .wrap {
+        width: $wrap_bar_w;
+        margin: 0 auto;
+        .ul-nav {
+          padding-left: 180px;
+          li {
+            list-style: none;
+            float: left;
+            height: 34px;
+            text-align: center;
+            a {
+              float: left;
+              height: 20px;
+              padding: 0 13px;
+              margin: 7px 17px 0;
+              border-radius: 20px;
+              line-height: 21px;
+              color: white;
+              text-decoration: none;
+            }
+            a:hover, a.selected {
+              background: #9b0909;
+            }
+          }
+        }
+      }
+    }
+
+    .one-red-line{
+      height: 5px;
+      background-color: #c20c0c;
+    }
+  }
+}
+
+.f-cb::after {
+  clear: both;
+  display: block;
+  content: ".";
+  visibility: hidden;
+}
+[hidefocus] {
+  outline: none;
+}

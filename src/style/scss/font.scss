@@ -1,0 +1,10 @@
+$small :0.1rem;
+$normal:.2rem;
+$large:.3rem;
+$x-large:.4rem;
+
+
+$baseSie : 80;
+@function pxToRem($size){
+   @return $size / $baseSie  * 1rem
+}
