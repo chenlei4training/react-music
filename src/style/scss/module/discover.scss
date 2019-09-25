@@ -241,14 +241,37 @@
               }
             }
           }
-          button{
+          .button{
             display:block;
-            width: 205px;
+            $CW:198px; //content width
+            width: $CW;
+            padding-right:5px;
             margin:0 auto;
-            border-radius: 4px;
-            border:1px solid #e3e3e3;
-            background-color: #f5f5f5;
+            // border-radius: 4px;
+            // border:0px solid #e3e3e3;
+            border:0;
+            background-image: url(../../img/button2.png);
+            background-position: right -100px;
+            background-repeat: no-repeat;
+            i{
+              display: block;
+              width: $CW;
+              height: 31px;
+              text-align: center;
+              line-height: 31px;
+              background-image: url(../../img/button2.png);
+              background-position: 0 -59px;
+              background-repeat: no-repeat;
+              font-weight: bold;
+            }
           }
+          .button:hover{
+            background-position: right -182px;
+          }
+          .button:hover i{
+            background-position: 0 -141px;
+          }
+
           .dj{
             margin-top: 30px;
             h3{

@@ -61,7 +61,7 @@ const FadeEffect = () => {
 
 const renderSlide = (item, index) => {
   return (
-    <div className="any-sss" style={{ background: slide_color[index] }}>
+    <div key={index}  className="any-sss" style={{ background: slide_color[index] }}>
       <div className="wrap">
         <img src={item}></img>
 
