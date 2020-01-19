@@ -1,15 +1,3 @@
-## 该项目作为教程，对应B站视频
-```
-
-https://www.bilibili.com/video/av59189608/
-
-
-每一课都有独立的分支 叫course##
-
-ppt 在master分支的根目录里
-
-```
-
 ## 代码修改记录
 ```
 login\index.js
